@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.checkbox-container {
+  
+  border-radius: 5px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.checkbox-scrollable {
+  height: 160px; /* set a fixed height */
+  overflow-y: auto; /* add vertical scrolling */
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-size: 16px; /* increased font size */
+  padding: 10px;
+}
+
+input[type="checkbox"] {
+  margin: 0;
+  opacity: 0.1;
+  transform: scale(2.0); /* increased checkbox size */
+}
+
+label:hover input[type="checkbox"], 
+input[type="checkbox"]:focus {
+  opacity: 0.2;
+}
+
+input[type="checkbox"]:checked {
+  opacity: 1;
+  accent-color: #007bff; /* changed accent color to blue */
+}
+
+button {
+  background-color: #ffcc00;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:active {
+  opacity: 0.99;
+  background-color: #ffcc00;
+  transform: scale(0.98);
+}
+
+button:hover {
+  background-color: #ffcc00cb; /* changed button color on hover */
+}
+
+/* Hide scrollbar */
+.checkbox-scrollable::-webkit-scrollbar {
+  display: none;
+}
+
+.checkbox-scrollable {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="checkbox-container">
+    <label>
+      All pages
+      <input type="checkbox">
+    </label>
+  </div>
+  <div class="checkbox-scrollable">
+    <label>
+      Page 1
+      <input type="checkbox">
+    </label>
+    <label>
+      Page 2
+      <input type="checkbox">
+    </label>
+    <label>
+      Page 3
+      <input type="checkbox">
+    </label>
+    <label>
+      Page 4
+      <input type="checkbox">
+    </label>
+    <!-- add more checkboxes here -->
+    <label>
+      Page 5
+      <input type="checkbox">
+    </label>
+    <label>
+      Page 6
+      <input type="checkbox">
+    </label>
+  </div>
+  <button>Done</button>
+</div>
+
+</body>
+</html>
